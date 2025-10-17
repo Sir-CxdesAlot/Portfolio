@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Tayo's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h1 class="intro">My Skills</h1>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Java Programming</li>
+                <li>HTML &amp; CSS</li>
+                <li>Team Collaboration</li>
+                <li>Continuous Learning</li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/ToluwaniEnochOmotayo" target="_blank" title="GitHub" aria-label="GitHub">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tayo. All Rights Reserved.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+const hamburger = document.getElementById('hamburger-menu');
+const nav = document.querySelector('nav');
+
+if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        nav.classList.toggle('open');
+    });
+
+
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            nav.classList.remove('open');
+        });
+    });
+}
+</script>
+</body>
+</html>
