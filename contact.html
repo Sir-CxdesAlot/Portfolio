@@ -23,31 +23,60 @@
     </header>
 
     <main>
-        <section class="card contact-card">
-            <h1 class="intro">Get In Touch</h1>
-            <ul class="contact-list">
-                <li>
-                    <span class="contact-label">Email:</span>
-                    <span class="contact-value">omotayoenoch2006@gmail.com</span>
-                </li>
-                <li>
-                    <span class="contact-label">Phone:</span>
-                    <span class="contact-value">+264 81 870 2688</span>
-                </li>
-                <li>
-                    <span class="contact-label">Location:</span>
-                    <span class="contact-value">Windhoek, Namibia</span>
-                </li>
-                <li>
-                    <span class="contact-label">Availability:</span>
-                    <span class="contact-value">Open to Opportunities</span>
-                </li>
-            </ul>
-            <div class="social-icons">
-                <a href="https://github.com/ToluwaniEnochOmotayo" target="_blank" title="GitHub" aria-label="GitHub">
+        <section class="card contact-card" aria-labelledby="contact-heading">
+            <h1 id="contact-heading" class="intro">Get In Touch</h1>
+
+            <p class="subtitle">I'd love to hear from you — click to copy or use the links to open your mail/phone app.</p>
+
+            <div class="contact-grid" role="list">
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">
+                            <a href="mailto:omotayoenoch2006@gmail.com">omotayoenoch2006@gmail.com</a>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-copy="omotayoenoch2006@gmail.com" aria-label="Copy email">Copy</button>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="call-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">
+                            <a href="tel:+264818702688">+264 81 870 2688</a>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-copy="+264 81 870 2688" aria-label="Copy phone">Copy</button>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="location-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Location</div>
+                        <div class="info-value">Windhoek, Namibia</div>
+                    </div>
+                    <button class="copy-btn" data-copy="Windhoek, Namibia" aria-label="Copy location">Copy</button>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="time-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Availability</div>
+                        <div class="info-value">Open to Opportunities</div>
+                    </div>
+                    <button class="copy-btn" data-copy="Open to Opportunities" aria-label="Copy availability">Copy</button>
+                </article>
+            </div>
+
+            <div class="social-icons" style="margin-top:24px; justify-content:center;">
+                <a href="https://github.com/Sir-CxdesAlot" target="_blank" title="GitHub" aria-label="GitHub">
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
             </div>
+
+            <div id="toast" class="toast" aria-live="polite" hidden></div>
         </section>
     </main>
 
@@ -73,6 +102,36 @@ if (hamburger && nav) {
             nav.classList.remove('open');
         });
     });
+}
+</script>
+<script>
+// Copy-to-clipboard for contact cards and toast feedback
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-copy]');
+    if (!btn) return;
+    const text = btn.getAttribute('data-copy');
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(`Copied: ${text}`)).catch(() => showToast('Copy failed'));
+    } else {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showToast(`Copied: ${text}`); } catch { showToast('Copy failed'); }
+        ta.remove();
+    }
+});
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.hidden = false;
+    t.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => { t.classList.remove('show'); t.hidden = true; }, 2400);
 }
 </script>
 </body>
