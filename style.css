@@ -394,6 +394,58 @@ footer {
     }
 }
 
+/* Inventory-style skills grid (compact square slots) */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.skill-slot {
+    background: linear-gradient(180deg, rgba(20,20,20,0.96), rgba(12,12,12,0.96));
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    aspect-ratio: 1/1;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.skill-slot:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.55);
+    background: linear-gradient(180deg, rgba(255,71,87,0.03), rgba(255,71,87,0.01));
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.skill-sub {
+    font-size: 1rem;
+    color: #cfcfcf;
+    opacity: 0.9;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .inventory-grid {
+        grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+        gap: 8px;
+    }
+    .skill-name { font-size: 1rem; }
+    .skill-sub { font-size: 0.9rem; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     html {
