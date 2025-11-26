@@ -9,22 +9,23 @@
 </head>
 <body>
     <header>
-
         <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
         </div>
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="contact.html">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="card">
+        <!-- HOME SECTION -->
+        <section id="home" class="card hero-card">
             <img src="Assets/images/IMG_20211224_154155_1.jpg" alt="Tayo's Profile Picture" class="pfp">
             <h1 class="intro">Welcome to My Portfolio</h1>
             <h2>Hi, I'm <span class="highlight">Tayo</span></h2>
@@ -35,6 +36,312 @@
                 </a>
             </div>
         </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="card section-card">
+            <h1 class="intro">My Skills</h1>
+            <p class="subtitle">Languages, tools, and technologies I use.</p>
+
+            <h2 style="margin-top:18px; color:#fff; font-size:1.8rem;">Languages</h2>
+            <div class="contact-grid" role="list" aria-label="Languages list">
+                <article class="info-card" role="listitem">
+                    <div class="info-icon" aria-hidden="true">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M6.5 4.5c2.2-.6 5.6-1.1 8 0-1.2 1.2-3.4 1.6-5 1.9" stroke="#ff4757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 7.5c1.8-.3 3.8-.6 6 .3" stroke="#ff4757" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 11c3 0 4.5.5 4.5 2 0 1.9-2.5 2.5-4.5 2.5S7.5 14.9 7.5 13C7.5 11.6 9 11 12 11z" fill="#ff4757"/>
+                            <path d="M9 16.5c0 .8 1.8 1.5 3 1.5s3-.7 3-1.5" stroke="#ff4757" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="info-body">
+                        <div class="info-label">Java</div>
+                        <div class="info-value">Core OOP &amp; Design</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="logo-html5"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">HTML5</div>
+                        <div class="info-value">Semantic, accessible markup</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="logo-css3"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">CSS3</div>
+                        <div class="info-value">Responsive layouts &amp; modern UI</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="server-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">SQL / MySQL</div>
+                        <div class="info-value">Database design &amp; queries</div>
+                    </div>
+                </article>
+            </div>
+
+            <h2 style="margin-top:20px; color:#fff; font-size:1.8rem;">Tools &amp; Tech</h2>
+            <div class="contact-grid" role="list" aria-label="Tools list">
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="code-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">VS Code</div>
+                        <div class="info-value">Primary code editor</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="document-text-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Obsidian</div>
+                        <div class="info-value">Notes &amp; knowledge management</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="leaf-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">MongoDB</div>
+                        <div class="info-value">NoSQL databases</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="brush-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Figma</div>
+                        <div class="info-value">Design and prototyping</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="videocam-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">DaVinci Resolve</div>
+                        <div class="info-value">Video editing</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="desktop-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Scene Builder</div>
+                        <div class="info-value">JavaFX UI design tool</div>
+                    </div>
+                </article>
+            </div>
+
+            <h2 style="margin-top:20px; color:#fff; font-size:1.8rem;">Currently Exploring</h2>
+            <ul style="margin-top:8px; list-style: none; padding-left:0;">
+                <li style="font-size:1.6rem; margin:8px 0;">🌐 React.js &amp; Node.js for full-stack web apps</li>
+                <li style="font-size:1.6rem; margin:8px 0;">🗃️ Better database design with SQL &amp; MongoDB</li>
+                <li style="font-size:1.6rem; margin:8px 0;">🎯 DSA and real-world projects</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="card section-card">
+            <h1 class="intro">Education</h1>
+            <p class="subtitle">Educational background and certifications.</p>
+
+            <div class="contact-grid" role="list" aria-label="Education list">
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="school-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Bachelor of Computer Science</div>
+                        <div class="info-value">National University of Science and Technology (Present)</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Web Development Certification</div>
+                        <div class="info-value">Udemy (Present)</div>
+                    </div>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="book-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">High School</div>
+                        <div class="info-value">Cambridge International (IGCSE)</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="card section-card">
+            <h1 class="intro">Projects</h1>
+            <p class="subtitle">Check out some of my recent work and contributions.</p>
+
+            <div class="projects-grid" role="list" aria-label="Projects list">
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="code-outline" class="project-icon"></ion-icon>
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <span class="badge-live">You Are Here</span>
+                    </div>
+                    <p class="project-description">A responsive single-page portfolio showcasing my skills, education, and projects with smooth navigation and modern UI design.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Sir-CxdesAlot/Portfolio" class="project-link" target="_blank">View on GitHub →</a>
+                </article>
+
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="logo-github" class="project-icon"></ion-icon>
+                        <h3 class="project-title">GitHub Profile</h3>
+                    </div>
+                    <p class="project-description">Explore more projects and contributions on my GitHub profile where I showcase my coding skills and open source contributions.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Web Dev</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                    <a href="https://github.com/Sir-CxdesAlot" class="project-link" target="_blank">Visit GitHub →</a>
+                </article>
+
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="globe-outline" class="project-icon"></ion-icon>
+                        <h3 class="project-title">Nexus Namibia Platform</h3>
+                    </div>
+                    <p class="project-description">A comprehensive platform empowering unemployed youth in Namibia with job opportunities, skills development courses, funding access, mentorship connections, and networking features.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript ES6+</span>
+                        <span class="tag">LocalStorage</span>
+                    </div>
+                    <a href="https://github.com/Sir-CxdesAlot/Nexus-Namibia" class="project-link" target="_blank">View on GitHub →</a>
+                </article>
+
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="server-outline" class="project-icon"></ion-icon>
+                        <h3 class="project-title">Lecturer Management System</h3>
+                    </div>
+                    <p class="project-description">A Java desktop application demonstrating CRUD operations, relational database integration, and MVC + DAO design patterns. Features lecturer management, course catalog views, faculty organization, and admin authentication.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">MVC Pattern</span>
+                    </div>
+                    <a href="https://github.com/Sir-CxdesAlot/Lecturer-Management-System" class="project-link" target="_blank">View on GitHub →</a>
+                </article>
+
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="bus-outline" class="project-icon"></ion-icon>
+                        <h3 class="project-title">Urban Ticketing Hub</h3>
+                    </div>
+                    <p class="project-description">A scalable distributed microservices platform for Windhoek's public transport ticketing system developed as a team project. <strong>My role:</strong> Implemented the Transport Service microservice - managing routes, trips, and trip schedules with full CRUD operations and database integration. Collaborated with teammates on 6 interconnected services including passenger management, payments, notifications, and admin functions, all using Kafka for real-time event-driven communication.</p>
+                    <div class="project-tags">
+                        <span class="tag">Ballerina</span>
+                        <span class="tag">Transport Service</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Microservices</span>
+                    </div>
+                    <a href="https://github.com/Sir-CxdesAlot/Urban-Ticketing-Hub" class="project-link" target="_blank">View on GitHub →</a>
+                </article>
+
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="palette-outline" class="project-icon"></ion-icon>
+                        <h3 class="project-title">CSS UI Styling Lab</h3>
+                    </div>
+                    <p class="project-description">A comprehensive hands-on styling project implementing modern UI components from scratch. Features custom-styled cards, buttons, chips, navigation bars, and forms with responsive design, CSS variables for theming, and interactive states.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                    <a href="https://github.com/Sir-CxdesAlot/CSS-UI-Styling-WAD-Lab-5" class="project-link" target="_blank">View on GitHub →</a>
+                </article>
+
+                <article class="project-card" role="listitem">
+                    <div class="project-header">
+                        <ion-icon name="hammer-outline" class="project-icon"></ion-icon>
+                        <h3 class="project-title">Coming Soon</h3>
+                    </div>
+                    <p class="project-description">I'm currently working on exciting new projects combining React.js, Node.js, and modern web technologies. Stay tuned for updates!</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <a href="#contact" class="project-link">Get in Touch →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="card contact-card section-card">
+            <h1 id="contact-heading" class="intro">Get In Touch</h1>
+            <p class="subtitle">I'd love to hear from you — click to copy or use the links to open your mail/phone app.</p>
+
+            <div class="contact-grid" role="list">
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">
+                            <a href="mailto:omotayoenoch2006@gmail.com">omotayoenoch2006@gmail.com</a>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-copy="omotayoenoch2006@gmail.com" aria-label="Copy email">Copy</button>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="call-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">
+                            <a href="tel:+264818702688">+264 81 870 2688</a>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-copy="+264 81 870 2688" aria-label="Copy phone">Copy</button>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="location-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Location</div>
+                        <div class="info-value">Windhoek, Namibia</div>
+                    </div>
+                    <button class="copy-btn" data-copy="Windhoek, Namibia" aria-label="Copy location">Copy</button>
+                </article>
+
+                <article class="info-card" role="listitem">
+                    <div class="info-icon"><ion-icon name="time-outline"></ion-icon></div>
+                    <div class="info-body">
+                        <div class="info-label">Availability</div>
+                        <div class="info-value">Open to Opportunities</div>
+                    </div>
+                    <button class="copy-btn" data-copy="Open to Opportunities" aria-label="Copy availability">Copy</button>
+                </article>
+            </div>
+
+            <div class="social-icons" style="margin-top:24px; justify-content:center;">
+                <a href="https://github.com/Sir-CxdesAlot" target="_blank" title="GitHub" aria-label="GitHub">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </div>
+
+            <div id="toast" class="toast" aria-live="polite" hidden></div>
+        </section>
     </main>
 
     <footer>
@@ -43,23 +350,50 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
-const hamburger = document.getElementById('hamburger-menu');
-const nav = document.querySelector('nav');
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('nav');
 
-if (hamburger && nav) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        nav.classList.toggle('open');
-    });
+        if (hamburger && nav) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                nav.classList.toggle('open');
+            });
 
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('open');
+                    nav.classList.remove('open');
+                });
+            });
+        }
 
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            nav.classList.remove('open');
+        // Copy-to-clipboard for contact cards and toast feedback
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-copy]');
+            if (!btn) return;
+            const text = btn.getAttribute('data-copy');
+            if (!text) return;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => showToast(`Copied: ${text}`)).catch(() => showToast('Copy failed'));
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); showToast(`Copied: ${text}`); } catch { showToast('Copy failed'); }
+                ta.remove();
+            }
         });
-    });
-}
-</script>
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            if (!t) return;
+            t.textContent = msg;
+            t.hidden = false;
+            t.classList.add('show');
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => { t.classList.remove('show'); t.hidden = true; }, 2400);
+        }
+    </script>
 </body>
 </html>
