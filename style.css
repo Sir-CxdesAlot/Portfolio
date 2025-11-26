@@ -476,6 +476,19 @@ footer {
     letter-spacing: 0.5px;
 }
 
+.badge-wip {
+    display: inline-block;
+    background: #ff4757;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .project-description {
     font-size: 1.4rem;
     color: #ccc;
