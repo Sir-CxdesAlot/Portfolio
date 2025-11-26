@@ -9,7 +9,7 @@ This portfolio is a work in progress, and I will continue to update it with new 
 ## Live Link
 
 You can view the portfolio live at:  
-[**Tayo's Portfolio**](https://omotayo-portfolio.netlify.app/)
+[**Tayo's Portfolio**](https://sir-cxdesalot.github.io/Portfolio/)
 
 ## Updates
 
