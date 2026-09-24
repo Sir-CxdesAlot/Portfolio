@@ -34,7 +34,7 @@
 
         <section id="work" class="work section-shell"><div class="section-topline"><p class="eyebrow">06 / SELECTED WORK</p><span>Builds, experiments, and systems</span></div><div class="project-list"><a class="project-row" href="https://github.com/Sir-CxdesAlot/Portfolio" target="_blank" rel="noreferrer"><span class="project-index">01</span><div><h3>Portfolio Website</h3><p>HTML5 · CSS3 · JavaScript</p></div><span class="row-arrow">↗</span></a><a class="project-row" href="https://github.com/Sir-CxdesAlot/Lecturer-Management-System" target="_blank" rel="noreferrer"><span class="project-index">02</span><div><h3>Lecturer Management System</h3><p>Java · JavaFX · SQL · MVC / DAO</p></div><span class="row-arrow">↗</span></a><a class="project-row" href="https://github.com/Sir-CxdesAlot/Urban-Ticketing-Hub" target="_blank" rel="noreferrer"><span class="project-index">03</span><div><h3>Urban Ticketing Hub</h3><p>Ballerina · Kafka · MongoDB · Microservices</p></div><span class="row-arrow">↗</span></a><a class="project-row" href="https://github.com/Sir-CxdesAlot/CSS-UI-Styling-WAD-Lab-5" target="_blank" rel="noreferrer"><span class="project-index">04</span><div><h3>CSS UI Styling Lab</h3><p>HTML5 · CSS3 · Responsive systems</p></div><span class="row-arrow">↗</span></a><a class="project-row" href="https://github.com/Sir-CxdesAlot/SimpleWeatherApp" target="_blank" rel="noreferrer"><span class="project-index">05</span><div><h3>Simple Weather App</h3><p>Java · Swing · API integration <i>In progress</i></p></div><span class="row-arrow">↗</span></a></div></section>
 
-        <section id="contact" class="contact section-shell"><p class="eyebrow">07 / CONTACT</p><h2>Have a good<br><em>idea?</em></h2><p class="contact-intro">Open to freelance work, product design collaborations, and meaningful digital projects.</p><div class="contact-actions"><a class="button button-light" href="mailto:sir.cxdesalot@gmail.com">Email me <span>↗</span></a><a class="button button-secondary" href="tel:+264818702688">Call now <span>↗</span></a></div><div class="contact-meta"><a href="mailto:sir.cxdesalot@gmail.com">sir.cxdesalot@gmail.com</a><a href="tel:+264818702688">+264 81 870 2688</a><a href="https://github.com/Sir-CxdesAlot" target="_blank" rel="noreferrer">GitHub Profile ↗</a><span>Windhoek, Namibia</span></div></section>
+        <section id="contact" class="contact section-shell"><p class="eyebrow">07 / CONTACT</p><h2>Have a good<br><em>idea?</em></h2><p class="contact-intro">Open to freelance work, product design collaborations, and meaningful digital projects.</p><div class="contact-actions"><button class="text-link talk-trigger" type="button">Let's talk <span>↗</span></button></div><div class="contact-meta"><a href="mailto:sir.cxdesalot@gmail.com">sir.cxdesalot@gmail.com</a><a href="tel:+264818702688">+264 81 870 2688</a><a href="https://github.com/Sir-CxdesAlot" target="_blank" rel="noreferrer">GitHub Profile ↗</a><span>Windhoek, Namibia</span></div></section>
     </main>
     <div class="contact-modal" id="contactModal" aria-hidden="true">
         <div class="contact-modal__backdrop" data-close-modal></div>
@@ -61,7 +61,7 @@
         <a href="#home" class="footer-top">Back to top ↑</a>
     </footer>
     <script>
-        const talkTrigger = document.querySelector('.talk-trigger');
+        const talkTriggers = document.querySelectorAll('.talk-trigger');
         const contactModal = document.getElementById('contactModal');
         const closeModalButtons = document.querySelectorAll('[data-close-modal], .contact-modal__close');
 
@@ -75,9 +75,9 @@
             contactModal.setAttribute('aria-hidden', 'true');
         };
 
-        if (talkTrigger) {
-            talkTrigger.addEventListener('click', openContactModal);
-        }
+        talkTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', openContactModal);
+        });
 
         closeModalButtons.forEach((button) => {
             button.addEventListener('click', closeContactModal);
